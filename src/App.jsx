@@ -1,9 +1,10 @@
-import { useState } from "react";
+import {useState} from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import VendingMachineApp from "./VendingMachineApp";
 import RoutesList from "./RoutesList";
-import { BrowserRouter } from 'react-router-dom';
+import {BrowserRouter} from "react-router-dom";
+import Nav from "./Nav";
 
 /** Component for entire page.
  *
@@ -13,10 +14,10 @@ import { BrowserRouter } from 'react-router-dom';
  */
 
 function App() {
-
   return (
     <div className="App">
       <BrowserRouter>
+        <Nav />
         <RoutesList />
       </BrowserRouter>
     </div>
