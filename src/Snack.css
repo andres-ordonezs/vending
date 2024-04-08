@@ -1,7 +1,7 @@
 .Snack {
   width: 150px;
   height: 80px;
-  background-color: blue;
+  background-color: rgb(155, 90, 4);
   color: white;
   margin: 10px 0;
   display: flex;

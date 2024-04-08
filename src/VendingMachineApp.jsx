@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import Snack from "./Snack";
 
@@ -8,13 +9,17 @@ const SNACKS = ["Snickers", "Coke", "Chips"];
  *
  *
  */
-function VendingMachineApp({snacks = SNACKS}) {
+function VendingMachineApp({ snacks = SNACKS }) {
   return (
     <div>
       <h1>Vending Machine</h1>
-      {snacks.map((snack) => (
-        <Snack key={snack} title={snack} />
-      ))}
+      <ul>
+        {snacks.map((snack) => (
+          <li key={snack}>
+            <Link to={`/snack/${snack}`}>{snack}</Link>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }
